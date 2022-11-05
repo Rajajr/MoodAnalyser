@@ -25,8 +25,27 @@ namespace MoodAnalyzerMSTest
 
         }
 
-        
-    }
+        /// <summary>
+        /// TC 1:2 & 2:1: Given?I am in Happy Mood?and null message Should Return Happy 
+        /// </summary>
+        [TestMethod]
+        //[DataRow("I am in HAPPY Mood")]
+        [DataRow(null)]
+        public void GivenHappyMoodShouldReturnHappy(string message)
+        {
+            //Arrange
+            string expected = "HAPPY";
+            
+            MoodAnalyser moodanalyser = new MoodAnalyser(message);
 
+            //Act
+            string mood = moodanalyser.AnalyseMood();
+
+            //Assert
+            Assert.AreEqual(expected, mood);
+
+        }
+
+    }
     
 }

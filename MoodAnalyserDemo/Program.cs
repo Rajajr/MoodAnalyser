@@ -11,7 +11,8 @@ namespace MoodAnalyserDemo
         static void Main(string[] args)
         {
           
-            Console.WriteLine("welcome to the program");
+            Console.WriteLine("welcome to the programe");
+            
             Console.ReadLine();
         }
     }

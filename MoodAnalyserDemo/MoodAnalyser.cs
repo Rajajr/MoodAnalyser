@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MoodAnalyserDemo
+﻿namespace MoodAnalyserDemo
 {
     public class MoodAnalyser
     {
         public string message;
         public MoodAnalyser(string message)
         {
-          this.message = message;
+            this.message = message;
         }
         /// <summary>
         /// parameterized Constructor.
@@ -19,17 +13,26 @@ namespace MoodAnalyserDemo
         /// <paran name="message"></paran>
         public string AnalyseMood()
         {
-            if (this.message.Contains("sad"))
+            try
             {
-                return "SAD";
+                if (this.message.Contains("Sad"))
+                {
+                    return "SAD";
+
+                }
+                else
+                {
+                    return "HAPPY";
+
+                }
 
             }
-            else
+            catch
             {
                 return "HAPPY";
 
             }
-  
+
         }
     }
 }
